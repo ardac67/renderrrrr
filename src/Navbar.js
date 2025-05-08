@@ -3,7 +3,7 @@ import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
 import { Link } from "react-router-dom";
-import logo from "./logo.png"; // import your image
+import logo from "./logo.png";
 
 function Navbar() {
   return (
@@ -20,13 +20,9 @@ function Navbar() {
         }}
       >
         <Toolbar>
-          <div
-            style={{
-              display: "flex",
-              flex: "1",
-            }}
-          >
-            <a
+          <div style={{ display: "flex", flex: "1" }}>
+            <Link
+              to="/"
               style={{
                 display: "flex",
                 flex: "1",
@@ -49,7 +45,7 @@ function Navbar() {
                   height: "100px",
                 }}
               />
-            </a>
+            </Link>
 
             <div
               style={{
@@ -59,24 +55,19 @@ function Navbar() {
                 flex: "1",
               }}
             >
-              <div
-                style={{
-                  display: "flex",
-                  gap: "40px",
-                }}
-              >
-                <a href="/" style={navStyle}>
+              <div style={{ display: "flex", gap: "40px" }}>
+                <Link to="/" style={navStyle}>
                   Dashboard
-                </a>
-                <a href="/reports" style={navStyle}>
+                </Link>
+                <Link to="/reports" style={navStyle}>
                   Reports
-                </a>
-                <a href="/logs" style={navStyle}>
+                </Link>
+                <Link to="/logs" style={navStyle}>
                   Logs
-                </a>
-                <a href="/installation" style={navStyle}>
+                </Link>
+                <Link to="/installation" style={navStyle}>
                   Installation
-                </a>
+                </Link>
               </div>
             </div>
           </div>
